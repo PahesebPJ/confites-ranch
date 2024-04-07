@@ -8,13 +8,13 @@ type Props = {
     onOk: () => void,
     children: React.ReactNode,
     okButton: boolean,
-    show: string
+    dialogId: string,
 }
 
-export default function Dialog({title, onClose, onOk, children, okButton, show}: Props) {
+export default function Dialog({title, onClose, onOk, children, okButton = false, dialogId}: Props) {
     const searchParams = useSearchParams()
     const dialogRef = useRef<null | HTMLDialogElement>(null)
-    const showDialog = searchParams.get(show)
+    const showDialog = searchParams.get(dialogId)
 
     useEffect(() => {
         if(showDialog === 'y') {

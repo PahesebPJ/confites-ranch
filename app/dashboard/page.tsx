@@ -50,7 +50,7 @@ export default function Dashboard(){
 
     return (
         <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
-            <Dialog title="Quick Schedule" onClose={onClose} onOk={onOk} okButton={false} show="showDialog">
+            <Dialog title="Quick Schedule" onClose={onClose} onOk={onOk} okButton={false} dialogId="showDialog">
                 {/* <Link href="/schedule" className="text-3xl underline">Go to schedule page</Link> */}
                 <form onSubmit={handleSubmit}>
                     <div className="p-6 flex flex-col gap-4">
